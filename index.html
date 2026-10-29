@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#064e3b">
+
+  <title>SayurSegar | Sayuran Segar dari Petani Lokal</title>
+  <meta name="description" content="SayurSegar merupakan media informasi sayuran lokal Desa Girimulya yang membantu masyarakat mengenal produk, melihat harga contoh, dan menghubungi penjual.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- PENGUMUMAN -->
+  <div class="announcement">
+    Dukung petani lokal · Jelajahi hasil kebun SayurSegar
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="SayurSegar - Beranda">
+        <img src="img/logo.png" alt="Logo SayurSegar">
+        <span>
+          Sayur<span class="brand-accent">Segar</span>
+          <small>LANGSUNG DARI PETANI</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
+        <a href="index.html" class="active" aria-current="page">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+
+      <a class="btn btn-dark header-cta" href="kontak.html">
+        Hubungi Kami <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            HASIL KEBUN LOKAL · GIRIMULYA
+          </p>
+
+          <h1>
+            Segar dari kebun,<br>
+            <span>lebih dekat ke meja Anda.</span>
+          </h1>
+
+          <p class="hero-description">
+            Temukan pilihan sayuran untuk kebutuhan sehari-hari.
+            SayurSegar hadir sebagai media informasi produk yang
+            memudahkan masyarakat mengenal sayuran lokal dan
+            menghubungi penjual.
+          </p>
+
+          <div class="hero-actions">
+            <a href="produk.html" class="btn btn-primary">
+              Jelajahi Produk <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="kontak.html" class="text-link">
+              Kenali SayurSegar <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✓</span>
+            <span>Informasi produk dan pemesanan dalam satu tempat</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img
+              src="img/keranjangsegar.jpg"
+              alt="Keranjang berisi aneka sayuran"
+              fetchpriority="high">
+          </div>
+
+          <div class="floating-note">
+            <span class="floating-icon" aria-hidden="true">✳</span>
+            <div>
+              <strong>Dukung hasil kebun lokal</strong>
+              <small>Mulai dari pilihan sehari-hari</small>
+            </div>
+          </div>
+
+          <span class="hero-decoration decoration-one" aria-hidden="true">✳</span>
+          <span class="hero-decoration decoration-two" aria-hidden="true">·</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFORMASI UTAMA -->
+    <section class="trust-strip" aria-label="Keunggulan informasi SayurSegar">
+      <div class="container trust-grid">
+
+        <div>
+          <span class="trust-number">01</span>
+          <div>
+            <strong>Pilihan sayuran</strong>
+            <small>Kenali produk yang tersedia</small>
+          </div>
+        </div>
+
+        <div>
+          <span class="trust-number">02</span>
+          <div>
+            <strong>Informasi harga</strong>
+            <small>Lihat harga contoh produk</small>
+          </div>
+        </div>
+
+        <div>
+          <span class="trust-number">03</span>
+          <div>
+            <strong>Kontak langsung</strong>
+            <small>Tanyakan stok dan pemesanan</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUK UNGGULAN -->
+    <section class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PILIHAN HARIAN</p>
+          <h2>Produk pilihan</h2>
+        </div>
+
+        <a href="produk.html" class="text-link">
+          Lihat semua produk <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="product-grid featured-grid">
+
+        <article class="product-card">
+          <a class="product-image" href="produk.html" aria-label="Lihat daftar produk kol">
+            <img src="img/kol.jpg" alt="Kol segar" loading="lazy">
+            <span class="product-label">Sayuran</span>
+          </a>
+
+          <div class="product-content">
+            <h3>Kol Segar</h3>
+            <p class="product-description">
+              Pilihan sayuran untuk menu rumahan.
+            </p>
+
+            <div class="product-bottom">
+              <p class="price">Rp 6.000 <span>/ kg</span></p>
+              <a class="round-link" href="produk.html" aria-label="Lihat kol">↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image" href="produk.html" aria-label="Lihat daftar produk wortel">
+            <img src="img/wortel.jpg" alt="Wortel segar" loading="lazy">
+            <span class="product-label">Sayuran</span>
+          </a>
+
+          <div class="product-content">
+            <h3>Wortel</h3>
+            <p class="product-description">
+              Cocok untuk sup dan beragam hidangan.
+            </p>
+
+            <div class="product-bottom">
+              <p class="price">Rp 8.000 <span>/ kg</span></p>
+              <a class="round-link" href="produk.html" aria-label="Lihat wortel">↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image" href="produk.html" aria-label="Lihat daftar produk tomat">
+            <img src="img/tomat.jpg" alt="Tomat merah segar" loading="lazy">
+            <span class="product-label">Sayuran</span>
+          </a>
+
+          <div class="product-content">
+            <h3>Tomat Merah</h3>
+            <p class="product-description">
+              Pelengkap masakan dan kebutuhan dapur.
+            </p>
+
+            <div class="product-bottom">
+              <p class="price">Rp 7.500 <span>/ kg</span></p>
+              <a class="round-link" href="produk.html" aria-label="Lihat tomat">↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- KENALI SAYURSEGAR: PENGGANTI CERITA KKN -->
+    <section class="story-section">
+      <div class="container story-grid">
+
+        <div class="story-image">
+          <img
+            src="img/keranjangsegar.jpg"
+            alt="Beragam sayuran untuk kebutuhan sehari-hari"
+            loading="lazy">
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow">KENALI SAYURSEGAR</p>
+
+          <h2>
+            Informasi sayuran lokal, lebih mudah dijangkau.
+          </h2>
+
+          <p>
+            SayurSegar merupakan website informasi yang membantu
+            masyarakat mengenal beragam pilihan sayuran lokal.
+            Melalui satu halaman, pengunjung dapat melihat produk,
+            membaca informasi harga contoh, dan menemukan kontak
+            untuk menanyakan ketersediaan sayuran.
+          </p>
+
+          <p>
+            Kami ingin membuat informasi produk lebih mudah
+            ditemukan sekaligus membuka jalur komunikasi antara
+            calon pembeli dan penjual.
+          </p>
+
+          <a href="produk.html" class="btn btn-light">
+            Lihat pilihan sayuran <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CARA MENGGUNAKAN WEBSITE -->
+    <section class="section container">
+      <div class="section-heading centered-heading">
+        <div>
+          <p class="eyebrow">MUDAH DAN PRAKTIS</p>
+          <h2>Cara menggunakan SayurSegar</h2>
+          <p class="section-intro">
+            Temukan produk dan tanyakan kebutuhan Anda dengan mudah.
+          </p>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+
+        <article class="step-card">
+          <span>01</span>
+          <h3>Jelajahi produk</h3>
+          <p>
+            Buka halaman produk untuk mengenal pilihan sayuran
+            dan melihat harga contoh.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span>02</span>
+          <h3>Hubungi penjual</h3>
+          <p>
+            Gunakan kontak yang tersedia untuk menanyakan
+            harga terbaru dan ketersediaan produk.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span>03</span>
+          <h3>Konfirmasi pesanan</h3>
+          <p>
+            Pastikan jumlah, harga, metode pembayaran,
+            dan pengambilan atau pengiriman bersama penjual.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="closing-cta">
+      <div class="container closing-inner">
+
+        <div>
+          <p class="eyebrow">ADA YANG INGIN DITANYAKAN?</p>
+          <h2>Temukan sayuran untuk kebutuhan Anda.</h2>
+          <p>
+            Hubungi SayurSegar untuk informasi produk dan pemesanan.
+          </p>
+        </div>
+
+        <a href="kontak.html" class="btn btn-white">
+          Hubungi Kami <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html" aria-label="SayurSegar - Beranda">
+          <img src="img/logo.png" alt="Logo SayurSegar">
+          <span>
+            Sayur<span class="brand-accent">Segar</span>
+            <small>LANGSUNG DARI PETANI</small>
+          </span>
+        </a>
+
+        <p>
+          Media informasi sayuran lokal untuk membantu masyarakat
+          mengenal produk dan terhubung dengan penjual.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Jelajahi</h3>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Tentang &amp; Kontak</a>
+      </div>
+
+      <div class="footer-information">
+        <h3>Informasi</h3>
+        <p>Desa Girimulya</p>
+        <p>Harga dan stok dikonfirmasi langsung.</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span>2025</span> SayurSegar</span>
+      <span>Dibuat untuk mendukung petani lokal.</span>
+    </div>
+  </footer>
+
+  <!-- TAHUN OTOMATIS DAN NAVIGASI MOBILE -->
+  <script>
+    document.querySelectorAll("[data-year]").forEach(function (element) {
+      element.textContent = new Date().getFullYear();
+    });
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#main-navigation");
+
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", function () {
+        const isExpanded =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        menuButton.setAttribute(
+          "aria-label",
+          isExpanded ? "Buka navigasi" : "Tutup navigasi"
+        );
+
+        navigation.style.display = isExpanded ? "" : "flex";
+        navigation.style.flexDirection = isExpanded ? "" : "column";
+      });
+
+      navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Buka navigasi");
+          navigation.style.display = "";
+          navigation.style.flexDirection = "";
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

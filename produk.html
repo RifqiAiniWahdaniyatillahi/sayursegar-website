@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#064e3b">
+
+  <title>Produk Sayuran | SayurSegar</title>
+  <meta name="description" content="Jelajahi pilihan sayuran lokal SayurSegar. Lihat informasi produk, harga contoh, dan hubungi penjual untuk pemesanan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ==================================
+       HALAMAN PRODUK SAYURSEGAR
+       ================================== */
+
+    .product-page {
+      background: #f8faf6;
+      color: #173b2e;
+    }
+
+    .product-page .product-hero {
+      padding: 64px 0 58px;
+      background: linear-gradient(135deg, #edf6eb 0%, #f8faf4 100%);
+      text-align: center;
+      border-bottom: 1px solid #e5ede2;
+    }
+
+    .product-page .eyebrow {
+      margin-bottom: 12px;
+      color: #198052;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+    }
+
+    .product-page .product-hero h1 {
+      margin: 0 0 15px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+    }
+
+    .product-page .hero-description {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #65776a;
+      font-size: 0.96rem;
+      line-height: 1.85;
+    }
+
+    .product-page .product-section {
+      padding-top: 55px;
+      padding-bottom: 65px;
+    }
+
+    /* Judul daftar produk */
+
+    .product-page .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .product-page .section-heading h2 {
+      margin: 0 0 7px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(1.45rem, 3vw, 1.85rem);
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .product-page .section-heading p {
+      margin: 0;
+      color: #718074;
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    .product-page .product-count {
+      flex-shrink: 0;
+      padding: 9px 14px;
+      border: 1px solid #e0ecdc;
+      border-radius: 30px;
+      background: #edf6e9;
+      color: #176b43;
+      font-size: 0.79rem;
+      font-weight: 700;
+    }
+
+    /* Grid produk */
+
+    .product-page .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    .product-page .product-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #e3eae0;
+      border-radius: 17px;
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(20, 65, 40, 0.035);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-page .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(20, 65, 40, 0.09);
+    }
+
+    /* Semua gambar memiliki ruang dan ukuran seragam */
+
+    .product-page .product-image-wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 15px;
+      background: #f4f7f0;
+    }
+
+    .product-page .product-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 5px;
+      transition: transform 0.25s ease;
+    }
+
+    .product-page .product-card:hover .product-image {
+      transform: scale(1.035);
+    }
+
+    .product-page .product-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 10px;
+      border: 1px solid rgba(225, 237, 219, 0.9);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #267249;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .product-page .product-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .product-page .product-name {
+      margin: 0 0 8px;
+      color: #153f2f;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .product-page .product-description {
+      min-height: 51px;
+      margin: 0 0 20px;
+      color: #718074;
+      font-size: 0.85rem;
+      line-height: 1.75;
+    }
+
+    .product-page .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 17px;
+      border-top: 1px solid #edf0e9;
+    }
+
+    .product-page .product-price-label {
+      display: block;
+      margin-bottom: 4px;
+      color: #849085;
+      font-size: 0.73rem;
+    }
+
+    .product-page .product-price {
+      color: #087443;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .product-page .product-unit {
+      color: #718074;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 400;
+    }
+
+    .product-page .order-button {
+      display: inline-flex;
+      flex-shrink: 0;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 15px;
+      border: 1px solid #087443;
+      border-radius: 9px;
+      background: #087443;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .product-page .order-button:hover {
+      transform: translateY(-1px);
+      background: #065d36;
+    }
+
+    /* Catatan harga */
+
+    .product-page .price-disclaimer {
+      margin-top: 20px;
+      color: #758276;
+      font-size: 0.78rem;
+      line-height: 1.8;
+    }
+
+    /* Panel informasi pemesanan */
+
+    .product-page .order-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      margin-top: 38px;
+      padding: 28px;
+      border: 1px solid #dfebdc;
+      border-radius: 16px;
+      background: #edf6e9;
+    }
+
+    .product-page .order-info h2 {
+      margin: 0 0 8px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .product-page .order-info p {
+      max-width: 650px;
+      margin: 0;
+      color: #667769;
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+
+    .product-page .info-button {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 45px;
+      padding: 12px 18px;
+      border: 1px solid #087443;
+      border-radius: 9px;
+      background: #fff;
+      color: #087443;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .product-page .info-button:hover {
+      background: #e2efde;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 950px) {
+      .product-page .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+    }
+
+    /* Ponsel */
+
+    @media (max-width: 600px) {
+      .product-page .product-hero {
+        padding: 45px 0 40px;
+      }
+
+      .product-page .product-hero h1 {
+        letter-spacing: -0.7px;
+      }
+
+      .product-page .hero-description {
+        font-size: 0.89rem;
+      }
+
+      .product-page .product-section {
+        padding-top: 35px;
+        padding-bottom: 42px;
+      }
+
+      .product-page .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+        margin-bottom: 22px;
+      }
+
+      .product-page .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 19px;
+      }
+
+      .product-page .product-image-wrap {
+        aspect-ratio: 4 / 3;
+        padding: 18px;
+      }
+
+      .product-page .product-content {
+        padding: 18px;
+      }
+
+      .product-page .product-description {
+        min-height: 0;
+      }
+
+      .product-page .order-info {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px;
+      }
+
+      .product-page .info-button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .product-page .product-card,
+      .product-page .product-image,
+      .product-page .order-button,
+      .product-page .info-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="product-page">
+
+  <!-- PENGUMUMAN: SAMA DENGAN INDEX -->
+  <div class="announcement">
+    Dukung petani lokal · Jelajahi hasil kebun SayurSegar
+  </div>
+
+  <!-- HEADER: SAMA DENGAN INDEX -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="SayurSegar - Beranda">
+        <img src="img/logo.png" alt="Logo SayurSegar">
+        <span>
+          Sayur<span class="brand-accent">Segar</span>
+          <small>LANGSUNG DARI PETANI</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="produk.html" class="active" aria-current="page">Produk</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+
+      <a class="btn btn-dark header-cta" href="kontak.html">
+        Hubungi Kami <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO PRODUK -->
+    <section class="product-hero">
+      <div class="container">
+
+        <p class="eyebrow">HASIL KEBUN LOKAL · GIRIMULYA</p>
+
+        <h1>Pilihan Sayuran Segar</h1>
+
+        <p class="hero-description">
+          Kenali pilihan sayuran untuk kebutuhan sehari-hari.
+          Lihat informasi produk dan harga contoh, lalu hubungi
+          kami untuk memastikan ketersediaan serta pemesanan.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- DAFTAR PRODUK -->
+    <section class="container product-section">
+
+      <div class="section-heading">
+        <div>
+          <h2>Daftar Produk</h2>
+          <p>Pilihan sayuran untuk melengkapi kebutuhan dapur Anda.</p>
+        </div>
+
+        <span class="product-count">6 pilihan produk</span>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- KOLOM 1: KOL -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/kol.jpg"
+              alt="Kol segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Kol Segar</h3>
+
+            <p class="product-description">
+              Pilihan sayuran untuk sup, tumisan, dan beragam
+              hidangan keluarga.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 6.000 <span class="product-unit">/ kg</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Kol%20Segar."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Kol Segar melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KOLOM 2: WORTEL -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/wortel.jpg"
+              alt="Wortel segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Wortel</h3>
+
+            <p class="product-description">
+              Cocok untuk sup, tumisan, dan berbagai olahan
+              makanan sehari-hari.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 8.000 <span class="product-unit">/ kg</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Wortel."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Wortel melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KOLOM 3: TOMAT -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/tomat.jpg"
+              alt="Tomat merah segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Tomat Merah</h3>
+
+            <p class="product-description">
+              Pelengkap sambal, sup, tumisan, dan beragam
+              masakan rumahan.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 7.500 <span class="product-unit">/ kg</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Tomat%20Merah."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Tomat Merah melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KOLOM 4: SAWI -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/sawi.jpg"
+              alt="Sawi hijau segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran daun</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Sawi Hijau</h3>
+
+            <p class="product-description">
+              Sayuran daun untuk tumisan, sup, dan aneka
+              hidangan sehari-hari.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 5.000 <span class="product-unit">/ ikat</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Sawi%20Hijau."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Sawi Hijau melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KOLOM 5: KENTANG -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/kentang.jpg"
+              alt="Kentang segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran umbi</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Kentang</h3>
+
+            <p class="product-description">
+              Dapat diolah menjadi perkedel, kentang goreng,
+              sup, dan beragam hidangan.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 12.000 <span class="product-unit">/ kg</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Kentang."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Kentang melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KOLOM 6: BAYAM -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="img/bayam.jpg"
+              alt="Bayam segar"
+              loading="lazy">
+            <span class="product-tag">Sayuran daun</span>
+          </div>
+
+          <div class="product-content">
+            <h3 class="product-name">Bayam</h3>
+
+            <p class="product-description">
+              Pilihan sayuran untuk sayur bening, sup,
+              dan menu rumahan.
+            </p>
+
+            <div class="product-bottom">
+              <div>
+                <span class="product-price-label">Harga contoh</span>
+                <div class="product-price">
+                  Rp 5.000 <span class="product-unit">/ ikat</span>
+                </div>
+              </div>
+
+              <a
+                class="order-button"
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20ketersediaan%20Bayam."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tanyakan Bayam melalui WhatsApp">
+                Pesan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA PEMESANAN -->
+      <div class="order-info">
+        <div>
+          <h2>Ingin memesan sayuran?</h2>
+          <p>
+            Hubungi kami untuk menanyakan ketersediaan stok,
+            harga terbaru, jumlah pembelian, dan informasi pengiriman.
+          </p>
+        </div>
+
+        <a
+          class="info-button"
+          href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20menanyakan%20stok%20dan%20harga%20sayuran."
+          target="_blank"
+          rel="noopener noreferrer">
+          Tanya Ketersediaan <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER: SAMA DENGAN INDEX -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html" aria-label="SayurSegar - Beranda">
+          <img src="img/logo.png" alt="Logo SayurSegar">
+          <span>
+            Sayur<span class="brand-accent">Segar</span>
+            <small>LANGSUNG DARI PETANI</small>
+          </span>
+        </a>
+
+        <p>
+          Media informasi sayuran lokal untuk membantu masyarakat
+          mengenal produk dan terhubung dengan penjual.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Jelajahi</h3>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Tentang &amp; Kontak</a>
+      </div>
+
+      <div class="footer-information">
+        <h3>Informasi</h3>
+        <p>Desa Girimulya</p>
+        <p>Harga dan stok dikonfirmasi langsung.</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span>2025</span> SayurSegar</span>
+      <span>Dibuat untuk mendukung petani lokal.</span>
+    </div>
+  </footer>
+
+  <!-- NAVIGASI MOBILE DAN TAHUN OTOMATIS -->
+  <script>
+    document.querySelectorAll("[data-year]").forEach(function (element) {
+      element.textContent = new Date().getFullYear();
+    });
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#main-navigation");
+
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", function () {
+        const isExpanded =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        menuButton.setAttribute(
+          "aria-label",
+          isExpanded ? "Buka navigasi" : "Tutup navigasi"
+        );
+
+        navigation.style.display = isExpanded ? "" : "flex";
+        navigation.style.flexDirection = isExpanded ? "" : "column";
+      });
+
+      navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Buka navigasi");
+          navigation.style.display = "";
+          navigation.style.flexDirection = "";
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

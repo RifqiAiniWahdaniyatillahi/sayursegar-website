@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#064e3b">
+
+  <title>Kontak Kami | SayurSegar</title>
+  <meta name="description" content="Hubungi SayurSegar untuk informasi produk sayuran lokal, pemesanan, dan ketersediaan stok.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== HALAMAN KONTAK ===== */
+
+    .contact-page {
+      background: #f8faf6;
+      color: #173b2e;
+    }
+
+    .contact-page * {
+      box-sizing: border-box;
+    }
+
+    .contact-page .contact-hero {
+      padding: 65px 0 58px;
+      text-align: center;
+      background: linear-gradient(135deg, #edf6eb, #f8faf4);
+      border-bottom: 1px solid #e5ede2;
+    }
+
+    .contact-page .eyebrow {
+      margin: 0 0 13px;
+      color: #198052;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+    }
+
+    .contact-page .contact-hero h1 {
+      margin: 0 0 15px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+
+    .contact-page .hero-description {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #65776a;
+      font-size: 0.96rem;
+      line-height: 1.9;
+    }
+
+    /* ===== KONTEN UTAMA ===== */
+
+    .contact-page .contact-main {
+      padding-top: 48px;
+      padding-bottom: 62px;
+    }
+
+    .contact-page .contact-intro {
+      margin-bottom: 25px;
+    }
+
+    .contact-page .contact-intro h2 {
+      margin: 0 0 8px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+
+    .contact-page .contact-intro p {
+      margin: 0;
+      color: #718074;
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .contact-page .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    .contact-page .contact-panel {
+      min-width: 0;
+      padding: 28px;
+      background: #fff;
+      border: 1px solid #e3eae0;
+      border-radius: 17px;
+      box-shadow: 0 5px 18px rgba(20, 65, 40, 0.045);
+    }
+
+    .contact-page .panel-heading {
+      margin: 0 0 9px;
+      color: #064e3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .contact-page .contact-description {
+      margin: 0 0 22px;
+      color: #718074;
+      font-size: 0.87rem;
+      line-height: 1.85;
+    }
+
+    /* ===== INFORMASI KONTAK ===== */
+
+    .contact-page .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 17px 0;
+      border-bottom: 1px solid #edf0e9;
+    }
+
+    .contact-page .contact-item:first-of-type {
+      padding-top: 5px;
+    }
+
+    .contact-page .contact-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .contact-page .contact-icon {
+      display: flex;
+      flex: 0 0 44px;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #e0ecdc;
+      border-radius: 12px;
+      background: #edf6e9;
+      font-size: 1.15rem;
+    }
+
+    .contact-page .contact-item-content {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .contact-page .contact-item h3 {
+      margin: 0 0 5px;
+      color: #244a35;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 800;
+    }
+
+    .contact-page .contact-item p,
+    .contact-page .contact-item a {
+      margin: 0;
+      color: #68796b;
+      font-size: 0.86rem;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-page .contact-item a {
+      color: #087443;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-page .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-page .detail-note {
+      margin-top: 4px !important;
+      color: #879286 !important;
+      font-size: 0.79rem !important;
+    }
+
+    /* ===== TOMBOL ===== */
+
+    .contact-page .contact-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 23px;
+    }
+
+    .contact-page .contact-button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-page .contact-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact-page .button-green {
+      background: #087443;
+      color: #fff;
+    }
+
+    .contact-page .button-green:hover {
+      background: #065d36;
+    }
+
+    .contact-page .button-outline {
+      border-color: #087443;
+      background: #fff;
+      color: #087443;
+    }
+
+    .contact-page .button-outline:hover {
+      background: #edf6e9;
+    }
+
+    /* ===== CATATAN PEMESANAN ===== */
+
+    .contact-page .contact-note {
+      margin-top: 24px;
+      padding: 19px;
+      border: 1px solid #e0ecdc;
+      border-radius: 12px;
+      background: #edf6e9;
+      color: #657768;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .contact-page .contact-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #175c3b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.93rem;
+    }
+
+    .contact-page .contact-note p {
+      margin: 0;
+    }
+
+    /* ===== PETA ===== */
+
+    .contact-page .contact-map {
+      width: 100%;
+      height: 335px;
+      overflow: hidden;
+      border: 1px solid #e3eae0;
+      border-radius: 13px;
+      background: #edf4e9;
+    }
+
+    .contact-page .contact-map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .contact-page .map-caption {
+      margin: 15px 0 0;
+      color: #718074;
+      font-size: 0.84rem;
+      line-height: 1.85;
+    }
+
+    .contact-page .map-actions {
+      margin-top: 19px;
+    }
+
+    /* ===== KARTU INFORMASI TAMBAHAN ===== */
+
+    .contact-page .contact-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .contact-page .benefit-item {
+      padding: 22px;
+      border: 1px solid #e3eae0;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .contact-page .benefit-icon {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 13px;
+      border-radius: 11px;
+      background: #edf6e9;
+      font-size: 1.1rem;
+    }
+
+    .contact-page .benefit-item h3 {
+      margin: 0 0 7px;
+      color: #174b34;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.91rem;
+      font-weight: 800;
+    }
+
+    .contact-page .benefit-item p {
+      margin: 0;
+      color: #718074;
+      font-size: 0.83rem;
+      line-height: 1.8;
+    }
+
+    /* ===== FOOTER ===== */
+
+    .contact-page .site-footer {
+      margin-top: 0;
+    }
+
+    .contact-page .footer-main {
+      display: grid;
+      grid-template-columns: 1.5fr 0.7fr 1fr;
+      gap: 55px;
+      padding-top: 48px;
+      padding-bottom: 35px;
+    }
+
+    .contact-page .footer-brand,
+    .contact-page .footer-links,
+    .contact-page .footer-information {
+      min-width: 0;
+    }
+
+    .contact-page .brand-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .contact-page .brand-footer img {
+      width: 42px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .contact-page .brand-footer > span {
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .contact-page .brand-footer .brand-accent {
+      color: #64c88b;
+    }
+
+    .contact-page .brand-footer small {
+      display: block;
+      margin-top: 5px;
+      color: #c3dfce;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.57rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .contact-page .footer-brand > p {
+      max-width: 340px;
+      margin: 22px 0 0;
+      color: #d2e5d9;
+      font-size: 0.85rem;
+      line-height: 1.9;
+    }
+
+    .contact-page .footer-links h3,
+    .contact-page .footer-information h3 {
+      margin: 5px 0 17px;
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .contact-page .footer-links a {
+      display: block;
+      width: fit-content;
+      margin-bottom: 13px;
+      color: #cde4d5;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .contact-page .footer-links a:hover {
+      color: #fff;
+    }
+
+    .contact-page .footer-information p {
+      margin: 0 0 12px;
+      color: #cde4d5;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .contact-page .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 19px;
+      padding-bottom: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: #c3dfce;
+      font-size: 0.72rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media (max-width: 950px) {
+      .contact-page .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .contact-page .contact-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-page .contact-map {
+        height: 350px;
+      }
+
+      .contact-page .footer-main {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-page .contact-hero {
+        padding: 44px 0 40px;
+      }
+
+      .contact-page .hero-description {
+        font-size: 0.89rem;
+      }
+
+      .contact-page .contact-main {
+        padding-top: 33px;
+        padding-bottom: 42px;
+      }
+
+      .contact-page .contact-intro h2 {
+        font-size: 1.45rem;
+      }
+
+      .contact-page .contact-panel {
+        padding: 20px;
+        border-radius: 14px;
+      }
+
+      .contact-page .panel-heading {
+        font-size: 1.17rem;
+      }
+
+      .contact-page .contact-actions {
+        flex-direction: column;
+      }
+
+      .contact-page .contact-button {
+        width: 100%;
+      }
+
+      .contact-page .contact-map {
+        height: 280px;
+      }
+
+      .contact-page .contact-benefits {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+      }
+
+      .contact-page .footer-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 27px;
+        padding-top: 35px;
+        padding-bottom: 28px;
+      }
+
+      .contact-page .footer-brand > p {
+        margin-top: 15px;
+      }
+
+      .contact-page .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .contact-page .contact-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+
+  <!-- PENGUMUMAN -->
+  <div class="announcement">
+    Dukung petani lokal · Jelajahi hasil kebun SayurSegar
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="SayurSegar - Beranda">
+        <img src="img/logo.png" alt="Logo SayurSegar">
+        <span>
+          Sayur<span class="brand-accent">Segar</span>
+          <small>LANGSUNG DARI PETANI</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html" class="active" aria-current="page">Kontak</a>
+      </nav>
+
+      <a class="btn btn-dark header-cta" href="#informasi-kontak">
+        Hubungi Kami <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <p class="eyebrow">KAMI SIAP MEMBANTU ANDA</p>
+
+        <h1>Mari Terhubung dengan Kami</h1>
+
+        <p class="hero-description">
+          Ingin mengetahui ketersediaan sayuran, harga terbaru,
+          atau informasi pemesanan? Hubungi kami untuk mendapatkan
+          informasi produk dari petani lokal.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFORMASI KONTAK DAN PETA -->
+    <section class="container contact-main" id="informasi-kontak">
+
+      <div class="contact-intro">
+        <h2>Informasi Kontak</h2>
+        <p>
+          Pilih cara yang paling nyaman untuk menghubungi SayurSegar.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- KARTU KONTAK -->
+        <section class="contact-panel" aria-labelledby="contact-info-title">
+
+          <h2 class="panel-heading" id="contact-info-title">
+            Hubungi SayurSegar
+          </h2>
+
+          <p class="contact-description">
+            Silakan hubungi kami untuk pertanyaan mengenai produk,
+            pemesanan, ketersediaan stok, maupun kerja sama.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">💬</div>
+
+            <div class="contact-item-content">
+              <h3>WhatsApp</h3>
+
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20bertanya%20tentang%20produk."
+                target="_blank"
+                rel="noopener noreferrer">
+                +62 812-3456-7890
+              </a>
+
+              <p class="detail-note">
+                Pertanyaan dan pemesanan produk.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+
+            <div class="contact-item-content">
+              <h3>Lokasi</h3>
+
+              <p>
+                Kantor Desa Girimulya, Kecamatan Pacet,
+                Kabupaten Bandung.
+              </p>
+
+              <p class="detail-note">
+                Buka peta untuk melihat titik lokasi.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🕒</div>
+
+            <div class="contact-item-content">
+              <h3>Jam Operasional</h3>
+
+              <p>Senin–Sabtu, 08.00–17.00</p>
+
+              <p class="detail-note">
+                Konfirmasikan stok sebelum melakukan pemesanan.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="contact-button button-green"
+              href="https://wa.me/6281234567890?text=Halo%20SayurSegar%2C%20saya%20ingin%20bertanya%20tentang%20sayuran%20yang%20tersedia."
+              target="_blank"
+              rel="noopener noreferrer">
+              Chat via WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="contact-note">
+            <strong>Belanja lebih dekat dengan petani.</strong>
+
+            <p>
+              Tanyakan ketersediaan produk, harga terbaru, dan informasi
+              pemesanan sebelum melakukan pembelian.
+            </p>
+          </div>
+
+        </section>
+
+        <!-- KARTU PETA LOKASI YANG BENAR -->
+        <section class="contact-panel" aria-labelledby="map-title">
+
+          <h2 class="panel-heading" id="map-title">
+            Temukan Lokasi Kami
+          </h2>
+
+          <p class="contact-description">
+            Berikut lokasi Kantor Desa Girimulya berdasarkan tautan
+            Google Maps yang kamu berikan.
+          </p>
+
+          <div class="contact-map">
+            <iframe
+              src="https://maps.google.com/maps?q=-7.1522115,107.6865895&z=17&output=embed"
+              title="Peta Kantor Desa Girimulya"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="map-caption">
+            Lihat titik lokasi dan petunjuk arah melalui Google Maps
+            sebelum melakukan perjalanan.
+          </p>
+
+          <div class="map-actions">
+            <a
+              href="https://maps.app.goo.gl/XUcSswhKjj4JA7e97"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-button button-outline">
+              Buka Lokasi di Google Maps
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- INFORMASI LAYANAN -->
+      <div class="contact-benefits">
+
+        <article class="benefit-item">
+          <div class="benefit-icon" aria-hidden="true">🌱</div>
+
+          <h3>Mendukung Petani Lokal</h3>
+
+          <p>
+            Mengenal hasil kebun lokal dan membantu memperluas
+            informasi produk pertanian Desa Girimulya.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-icon" aria-hidden="true">🥬</div>
+
+          <h3>Informasi Produk</h3>
+
+          <p>
+            Tanyakan jenis sayuran, harga, dan ketersediaan
+            sebelum menentukan pembelian.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-icon" aria-hidden="true">🤝</div>
+
+          <h3>Komunikasi Langsung</h3>
+
+          <p>
+            Hubungi kami untuk membahas kebutuhan pembelian
+            dan informasi pemesanan secara langsung.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER KONSISTEN DENGAN BERANDA -->
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+
+        <a class="brand brand-footer" href="index.html" aria-label="SayurSegar - Beranda">
+          <img src="img/logo.png" alt="Logo SayurSegar">
+
+          <span>
+            Sayur<span class="brand-accent">Segar</span>
+            <small>LANGSUNG DARI PETANI</small>
+          </span>
+        </a>
+
+        <p>
+          Media informasi sayuran lokal untuk membantu masyarakat
+          mengenal produk dan terhubung dengan penjual.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+        <h3>Jelajahi</h3>
+
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Tentang &amp; Kontak</a>
+      </div>
+
+      <div class="footer-information">
+        <h3>Informasi</h3>
+
+        <p>Desa Girimulya</p>
+        <p>Harga dan stok dikonfirmasi langsung.</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © <span>2025</span> SayurSegar
+      </span>
+
+      <span>Dibuat untuk mendukung petani lokal.</span>
+    </div>
+
+  </footer>
+
+  <script>
+    // Tahun copyright otomatis
+    document.querySelectorAll("[data-year]").forEach(function (element) {
+      element.textContent = new Date().getFullYear();
+    });
+
+    // Navigasi mobile
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#main-navigation");
+
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", function () {
+        const expanded =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute("aria-expanded", String(!expanded));
+        menuButton.setAttribute(
+          "aria-label",
+          expanded ? "Buka navigasi" : "Tutup navigasi"
+        );
+
+        navigation.style.display = expanded ? "" : "flex";
+        navigation.style.flexDirection = expanded ? "" : "column";
+      });
+
+      navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Buka navigasi");
+          navigation.style.display = "";
+          navigation.style.flexDirection = "";
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
